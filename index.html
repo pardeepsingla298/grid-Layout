@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+       
+        .container{
+            display: grid;
+            height: 98vh;
+            gap: 1.5em;
+            grid-template: repeat(12,1fr)/repeat(6,1fr) ;
+            
+        }
+        .container > *{
+            background-color: rgb(126, 201, 14);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .item1{
+            grid-row: 1/13;
+            background-image: url(./assets/one.png);
+            
+        }
+        .item2{
+            grid-area: 1/2/7/2;
+            background-image: url(./assets/two.jpg);
+        }
+        .item3{
+            grid-area: 7/2/13/2;
+            background-image: url(./assets/three.jpg);
+        }
+        .item4{
+            grid-row: span 4;
+            background-image: url(./assets/four.jpg);
+        }
+        .item5{
+            grid-row: 5 / span 4;
+            background-image: url(./assets/five.jpg);
+        }
+        .item6{
+            grid-row: span 4 / 13;
+            background-image: url(./assets/sic.jpg);
+        }
+        .item7{
+            grid-row: span 3 ;
+            background-image: url(./assets/seven.jpg);
+        }
+        .item8{
+            grid-row: 4/ span 3;
+            background-image: url(./assets/eight.jpg);
+        }
+        .item9{
+            grid-row: 7/ span 3;
+            background-image: url(./assets/nine.jpg);
+        }
+        .item10{
+            grid-row: 10/ span 3;
+            background-image: url(./assets/ten.jpg);
+        }
+        .item11{
+            grid-row: span 2;
+            background-image: url(./assets/eleven.jpg);
+        }
+        .item12{
+           grid-area: 3/5/5/5;
+           background-image: url(./assets/twelve.jpg);
+        }
+        .item13{
+            grid-row-start: 5;
+            grid-row-end: 7;
+            background-image: url(./assets/thirteen.jpg);
+        }
+        .item14{
+            grid-row-start: 7;
+            grid-row-end: 9;
+            background-image: url(./assets/fourteen.jpg);
+        }
+        .item15{
+            grid-row: 9/span 2;
+            background-image: url(./assets/fifteen.jpg);
+        }
+        .item16{
+            grid-row: 11/span 2;
+            background-image: url(./assets/sixteen.jpg);
+        }
+        .item17{
+            background-image: url(./assets/seventeen.jpg);
+            grid-row: span 3;
+        }
+        .item18{
+            background-image: url(./assets/eighteen.jpg);
+            grid-row: 4/ span 3;
+        }
+        .item19{
+            background-image: url(./assets/nineteen.jpg);
+            grid-row: 7/ span 3;
+        }
+        .item20{
+            grid-row:10/span 3 ;
+            background-image: url(./assets/twenty.jpg);
+        }
+
+        @media(max-width:1250px){
+            .container{
+                grid-template-columns: repeat(5,1fr);
+                
+            }
+        }
+        @media(max-width:1100px){
+            .container{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+        @media(max-width:1000px){
+            .container{
+                grid-template-columns: repeat(3,1fr);
+                
+            }
+        }
+        @media(max-width:700px){
+            .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="item1"></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item4"></div>
+            <div class="item5"></div>
+            <div class="item6"></div>
+            <div class="item7"></div>
+            <div class="item8"></div>
+            <div class="item9"></div>
+            <div class="item10"></div>
+            <div class="item11"></div>
+            <div class="item12"></div>
+            <div class="item13"></div>
+            <div class="item14"></div>
+            <div class="item15"></div>
+            <div class="item16"></div>
+            <div class="item17"></div>
+            <div class="item18"></div>
+            <div class="item19"></div>
+            <div class="item20"></div>
+            
+        </div>
+</body>
+</html>
